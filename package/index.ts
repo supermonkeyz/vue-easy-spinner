@@ -20,7 +20,7 @@ const spinnerPlugin = {
     };
     const prefix = options.prefix;
     const globalName = prefix
-      ? `${prefix}-Spinner.name`
+      ? `${prefix}-${Spinner.name}`
       : capitalize(Spinner.name);
     Vue.component(globalName, Spinner);
   },
