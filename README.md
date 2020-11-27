@@ -2,7 +2,7 @@
 
 A simple flexible spinner component for Vue.js 3.
 
-All of the (SVGs)[/package/resources] can use directly in browser which support for [SVG2](https://www.w3.org/TR/SVG2/).
+All of the [SVGs](package/resources) can use directly in browser which support for [SVG2](https://www.w3.org/TR/SVG2/).
 
 [live demo](https://uxfan.com/vue-easy-spinner/)
 
