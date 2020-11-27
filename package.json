@@ -43,7 +43,8 @@
     "start": "serve public"
   },
   "files": [
-    "dist"
+    "dist",
+    "package"
   ],
   "lint-staged": {
     "*.{js,json,vue,ts}": [
