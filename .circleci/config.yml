@@ -16,8 +16,8 @@ jobs:
           name: Run build
           command: npm run page
       - persist_to_workspace:
-          root: .
-          paths: vue-easy-spinner/public
+          root: /temp/
+          paths: vue-easy-spinner
   page-deploy:
     docker:
       - image: circleci/node:10
