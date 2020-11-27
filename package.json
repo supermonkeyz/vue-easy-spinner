@@ -1,6 +1,6 @@
 {
   "name": "vue-easy-spinner",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/vue-easy-spinner.cjs.js",
   "module": "dist/vue-easy-spinner.esm.js",
   "browser": "dist/vue-easy-spinner.umd.js",
