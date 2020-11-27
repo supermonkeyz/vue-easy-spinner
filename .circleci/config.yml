@@ -15,9 +15,12 @@ jobs:
       - run:
           name: Run build
           command: npm run page
+      - run:
+          name: Get ls
+          command: ls -a
       - persist_to_workspace:
           root: .
-          paths: vue-easy-spinner/public
+          paths: public
   page-deploy:
     docker:
       - image: circleci/node:10
