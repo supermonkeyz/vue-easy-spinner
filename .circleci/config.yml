@@ -44,7 +44,7 @@ jobs:
             - node_modules
       - add_ssh_keys:
           fingerprints:
-            - '1f:f7:96:19:03:2f:8e:f3:82:e6:e5:b6:0b:1c:2d:be'
+            - 'b7:c7:ad:66:03:a3:36:f5:62:4b:1b:e7:d0:5b:49:48'
       - run:
           name: Deploy docs to gh-pages branch
           command: npx gh-pages --dotfiles --message "[skip ci] Updates" -d public
