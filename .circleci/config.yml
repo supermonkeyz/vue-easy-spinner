@@ -16,7 +16,7 @@ jobs:
           name: Run build
           command: npm run page
       - persist_to_workspace:
-          root: ~
+          root: .
           paths: vue-easy-spinner/public
   page-deploy:
     docker:
