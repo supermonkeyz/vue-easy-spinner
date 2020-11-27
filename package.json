@@ -1,0 +1,64 @@
+{
+  "name": "vue-easy-spinner",
+  "version": "0.0.0",
+  "main": "dist/vue-easy-spinner.cjs.js",
+  "module": "dist/vue-easy-spinner.esm.js",
+  "browser": "dist/vue-easy-spinner.umd.js",
+  "author": "supermonkeyz <popbaby@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supermonkeyz/vue-easy-spinner/issues"
+  },
+  "homepage": "https://github.com/supermonkeyz/vue-easy-spinner#readme",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@vue/compiler-sfc": "^3.0.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-svg-to-vue": "^1.0.0-0",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
+    "serve": "^11.0.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "date-fns": "^1.30.1",
+    "vue": "^3.0.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "test": "rollup -c --environment PAGE",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public"
+  },
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "*.{js,json,vue,ts}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true
+  }
+}

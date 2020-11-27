@@ -1,0 +1,93 @@
+<svg version="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"
+  width="64" height="64">
+  <style>
+  <!-- vue svg loader will complier style inline without @keyframes -->
+  .circle1 {
+    opacity: 0.001;
+    transform: rotate3d(0, 0, 1, 225deg);
+    transform-origin: 150px 150px;
+    animation: Dots-_-rotate 5.5s linear infinite;
+  }
+
+  .circle2 {
+    opacity: 0.001;
+    transform: rotate3d(0, 0, 1, 225deg);
+    transform-origin: 150px 150px;
+    animation: Dots-_-rotate 5.5s linear infinite;
+    animation-delay: 240ms;
+  }
+
+  .circle3 {
+    opacity: 0.001;
+    transform: rotate3d(0, 0, 1, 225deg);
+    transform-origin: 150px 150px;
+    animation: Dots-_-rotate 5.5s linear infinite;
+    animation-delay: 480ms;
+  }
+
+  .circle4 {
+    opacity: 0.001;
+    transform: rotate3d(0, 0, 1, 225deg);
+    transform-origin: 150px 150px;
+    animation: Dots-_-rotate 5.5s linear infinite;
+    animation-delay: 720ms;
+  }
+
+  .circle5 {
+    opacity: 0.001;
+    transform: rotate3d(0, 0, 1, 225deg);
+    transform-origin: 150px 150px;
+    animation: Dots-_-rotate 5.5s linear infinite;
+    animation-delay: 960ms;
+  }
+
+  @keyframes Dots-_-rotate {
+    0% {
+      transform: rotate3d(0, 0, 1, 225deg);
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+
+    7% {
+      transform: rotate3d(0, 0, 1, 345deg);
+      animation-timing-function: linear;
+    }
+
+    30% {
+      transform: rotate3d(0, 0, 1, 455deg);
+      animation-timing-function: ease-in-out;
+    }
+
+    39% {
+      transform: rotate3d(0, 0, 1, 690deg);
+      animation-timing-function: linear;
+    }
+
+    60% {
+      transform: rotate3d(0, 0, 1, 815deg);
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+
+    75% {
+      transform: rotate3d(0, 0, 1, 945deg);
+      animation-timing-function: ease-out;
+    }
+
+    76% {
+      transform: rotate3d(0, 0, 1, 945deg);
+      opacity: 0;
+    }
+
+    100% {
+      transform: rotate3d(0, 0, 1, 945deg);
+      opacity: 0;
+    }
+  }
+  </style>
+  <circle class="circle1" r="16" cy="64" cx="236" fill="currentColor" />
+  <circle class="circle2" r="16" cy="64" cx="236" fill="currentColor" />
+  <circle class="circle3" r="16" cy="64" cx="236" fill="currentColor" />
+  <circle class="circle4" r="16" cy="64" cx="236" fill="currentColor" />
+  <circle class="circle5" r="16" cy="64" cx="236" fill="currentColor" />
+</svg>

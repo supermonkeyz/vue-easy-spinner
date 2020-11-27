@@ -1,0 +1,59 @@
+jobs:
+  page-build:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/vue-easy-spinner
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/vue-easy-spinner
+      - run: npm install
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Run build
+          command: npm run page
+      - persist_to_workspace:
+          root: .
+          paths: vue-easy-spinner
+  page-deploy:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/vue-easy-spinner
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/vue-easy-spinner
+      - run:
+          name: Disable jekyll builds
+          command: touch vue-easy-spinner/.nojekyll
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install gh-pages
+            git config user.email "popbaby@qq.com"
+            git config user.name "supermonkeyz"
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - add_ssh_keys:
+          fingerprints:
+            - '1f:f7:96:19:03:2f:8e:f3:82:e6:e5:b6:0b:1c:2d:be'
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: npx gh-pages --dotfiles --message "[skip ci] Updates" -d vue-easy-spinner
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - guide-build
+      - guide-deploy:
+          requires:
+            - guide-build
+          filters:
+            branches:
+              only: master
