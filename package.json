@@ -38,7 +38,7 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "test": "rollup -c --environment PAGE",
+    "page": "rollup -c --environment PAGE",
     "dev": "npm-run-all --parallel start watch",
     "start": "serve public"
   },
