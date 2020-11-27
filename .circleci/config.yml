@@ -31,7 +31,7 @@ jobs:
           at: ~/vue-easy-spinner
       - run:
           name: Disable jekyll builds
-          command: touch vue-easy-spinner/.nojekyll
+          command: touch public/.nojekyll
       - run:
           name: Install and configure dependencies
           command: |
@@ -47,7 +47,7 @@ jobs:
             - '1f:f7:96:19:03:2f:8e:f3:82:e6:e5:b6:0b:1c:2d:be'
       - run:
           name: Deploy docs to gh-pages branch
-          command: npx gh-pages --dotfiles --message "[skip ci] Updates" -d vue-easy-spinner
+          command: npx gh-pages --dotfiles --message "[skip ci] Updates" -d public
 
 workflows:
   version: 2
