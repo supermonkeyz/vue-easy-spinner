@@ -50,10 +50,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - guide-build
-      - guide-deploy:
+      - page-build
+      - page-deploy:
           requires:
-            - guide-build
+            - page-build
           filters:
             branches:
               only: master
