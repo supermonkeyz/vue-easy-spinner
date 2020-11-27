@@ -527,7 +527,7 @@
           var options = __assign(__assign({}, defaultOptions), userOptions);
           var prefix = options.prefix;
           var globalName = prefix
-              ? prefix + "-Spinner.name"
+              ? prefix + "-" + script$1.name
               : capitalize(script$1.name);
           Vue.component(globalName, script$1);
       },
